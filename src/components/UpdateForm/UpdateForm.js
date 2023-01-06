@@ -8,17 +8,17 @@ const UpdateForm = ({updateData,changeTask,updateTask,cancelUpdate }) =>{
                     <input
                         value={ updateData && updateData.name}
                         onChange={ (e) => changeTask(e)}
-                        className='form-control form-control-lg'
+                        className='mt-5 form-control form-control-lg'
                     />
                 </div>
                 <div className="col-auto">
                     <button
                         onClick={updateTask}
-                        className="btn btn-lg btn-success mr-20"
+                        className="mt-5 btn btn-lg btn-success mr-20"
                     >Update</button>
                     <button
                         onClick={cancelUpdate}
-                        className=" btn btn-lg btn-warning"
+                        className="mt-5 btn btn-lg btn-warning"
                     >Cancel</button>
                 </div>
             </div>

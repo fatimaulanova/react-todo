@@ -7,8 +7,17 @@ import './App.css';
 function App(){
     // Task State
     const [toDo, setToDo] = useState([
-        {'id': 1, 'name': 'Dastan', email: 'njcd@gmail.com', phone:'23456345', enrollNumber: '2348354t532', dataOfAdmission:'08/67/5532',  'status': false},
-        {'id': 2, 'name': 'Bekbol', email: 'njcd@gmail.com', phone:'23456345', enrollNumber: '2348354t532', dataOfAdmission:'08/67/5532',  'status': false}
+        {'id': 1, 'name': 'Google',
+            email: 'njcd@gmail.com',
+            phone:'23456345',
+            enrollNumber: '2348354t532',
+            dataOfAdmission:'08/67/5532',  'status': false},
+
+        // {'id': 2, 'name': 'Fatima',
+        //     email: 'njcd@gmail.com',
+        //     phone:'23456345',
+        //     enrollNumber: '2348354t532',
+        //     dataOfAdmission:'08/67/5532',  'status': false}
     ])
     // Temp State
     const [newTask, setNewTask] = useState('')
