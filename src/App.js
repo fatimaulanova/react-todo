@@ -7,8 +7,8 @@ import './App.css';
 function App(){
     // Task State
     const [toDo, setToDo] = useState([
-        {'id': 1, 'title': 'Task 1', 'status': false},
-        {'id': 2, 'title': 'Task 2', 'status': false}
+        {'id': 1, 'name': 'Dastan', email: 'njcd@gmail.com', phone:'23456345', enrollNumber: '2348354t532', dataOfAdmission:'08/67/5532',  'status': false},
+        {'id': 2, 'name': 'Bekbol', email: 'njcd@gmail.com', phone:'23456345', enrollNumber: '2348354t532', dataOfAdmission:'08/67/5532',  'status': false}
     ])
     // Temp State
     const [newTask, setNewTask] = useState('')
@@ -46,6 +46,10 @@ function App(){
        let newEntry = {
            id: updateData.id,
            name: e.target.value,
+           email: e.target.value,
+           phone: e.target.value,
+           enrollNumber: e.target.value,
+           dateOfAdmission: e.target.value,
            status: updateData.status ? true : false
        }
        setUpdateData(newEntry)
@@ -58,6 +62,7 @@ function App(){
         setUpdateData('')
     }
   return (
+
     <div className="container App">
         {/*update task*/}
         { updateData && updateData ? (

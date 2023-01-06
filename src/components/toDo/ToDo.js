@@ -4,7 +4,9 @@ import {BsPencil} from "react-icons/bs";
 import user from '../../img/msg1799107661-13950.jpg'
 import '../../App.css'
 
+
 const ToDo = ({toDo, markDone, setUpdateData,deleteTask}) =>{
+
     return(
         <>
         {toDo && toDo
@@ -16,7 +18,7 @@ const ToDo = ({toDo, markDone, setUpdateData,deleteTask}) =>{
                             <div className={task.status ? 'done' : ''}>
                                 {/*<span className='taskNumber'>{index + 1}</span>*/}
                                 <span className='userImg'> <img src={user} alt=""/> </span>
-                                <span className='taskText'>{task.title}</span>
+                                <span className='taskText'>{task.name}</span>
                             </div>
                             <div className="iconsWrap">
                                 <span title="Completed / Not Completed"
@@ -28,19 +30,18 @@ const ToDo = ({toDo, markDone, setUpdateData,deleteTask}) =>{
                                     <span title="Edit"
                                           onClick={ () => setUpdateData({
                                               id: task.id,
-                                              title:task.title,
+                                              name:task.name,
                                               status: task.status ? true : false
                                           })}>
                                     <BsPencil/>
                                 </span>
                                 )}
-
-
-
                                 <span title='Delete'
                                       onClick={() => deleteTask(task.id)}>
                                     <AiOutlineDelete/>
                                 </span>
+
+
                             </div>
                         </div>
                     </React.Fragment>
