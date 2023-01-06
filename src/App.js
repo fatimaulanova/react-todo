@@ -17,7 +17,7 @@ function App(){
     const addTask = () => {
         if(newTask){
             let num = toDo.length + 1
-            let newEntry = { id: num, title: newTask, status: false }
+            let newEntry = { id: num, name: newTask, status: false }
             setToDo([...toDo, newEntry])
             setNewTask('')
         }
@@ -45,7 +45,7 @@ function App(){
     const changeTask = (e) => {
        let newEntry = {
            id: updateData.id,
-           title: e.target.value,
+           name: e.target.value,
            status: updateData.status ? true : false
        }
        setUpdateData(newEntry)
@@ -59,7 +59,6 @@ function App(){
     }
   return (
     <div className="container App">
-      <h1>To Do List App (React Js)</h1>
         {/*update task*/}
         { updateData && updateData ? (
           <UpdateForm
